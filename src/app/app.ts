@@ -8,6 +8,7 @@ import { HeaderComponent } from "./components/header/header";
 import { HeroComponent } from "./components/hero/hero";
 import { ProgrammeCardComponent } from "./components/programme-card/programme-card";
 import { QualificationsNavComponent } from "./components/qualifications-nav/qualifications-nav";
+import { ImageBannerComponent } from "./components/image-banner/image-banner";
 import { QuoteComponent } from "./components/quote/quote";
 
 @Component({
@@ -20,6 +21,7 @@ import { QuoteComponent } from "./components/quote/quote";
     QuoteComponent,
     DiscoverComponent,
     QualificationsNavComponent,
+    ImageBannerComponent,
     ProgrammeCardComponent,
     FooterComponent,
   ],
@@ -30,6 +32,7 @@ import { QuoteComponent } from "./components/quote/quote";
       <app-quote [quote]="content.quote" />
       <app-discover [discover]="content.discover" />
       <app-qualifications-nav [nav]="content.qualificationsNav" />
+      <app-image-banner />
 
       @for (programme of content.programmes; track programme.id) {
         <app-programme-card [card]="programme" />
