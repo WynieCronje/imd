@@ -38,6 +38,11 @@
   aspect-ratio: 4 / 4.6;
 }
 
+.hero__cta {
+  background: var(--imd-navy);
+  color: var(--imd-white);
+}
+
 @media (max-width: 640px) {
   .hero__row {
     grid-template-columns: 1fr;
