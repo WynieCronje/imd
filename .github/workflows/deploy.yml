@@ -30,7 +30,10 @@ jobs:
         run: npm ci
 
       - name: Build (static prerender)
-        run: npx ng build --base-href /imd/
+        run: npx ng build --configuration staging --base-href /imd/
+
+      - name: Block crawlers (staging only)
+        run: printf 'User-agent: *\nDisallow: /\n' > dist/imd-college/browser/robots.txt
 
       - uses: actions/upload-pages-artifact@v3
         with:

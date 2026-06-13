@@ -1,14 +1,16 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, OnInit } from "@angular/core";
+import { Meta, Title } from "@angular/platform-browser";
 import { SITE_CONTENT } from "./data/site-content";
 import { SiteContent } from "./models/content.model";
+import { environment } from "../environments/environment";
 
 import { DiscoverComponent } from "./components/discover/discover";
 import { FooterComponent } from "./components/footer/footer";
 import { HeaderComponent } from "./components/header/header";
 import { HeroComponent } from "./components/hero/hero";
+import { ImageBannerComponent } from "./components/image-banner/image-banner";
 import { ProgrammeCardComponent } from "./components/programme-card/programme-card";
 import { QualificationsNavComponent } from "./components/qualifications-nav/qualifications-nav";
-import { ImageBannerComponent } from "./components/image-banner/image-banner";
 import { QuoteComponent } from "./components/quote/quote";
 
 @Component({
@@ -42,6 +44,16 @@ import { QuoteComponent } from "./components/quote/quote";
     </main>
   `,
 })
-export class App {
+export class App implements OnInit {
   protected readonly content: SiteContent = SITE_CONTENT;
+  private meta = inject(Meta);
+  private title = inject(Title);
+
+  ngOnInit(): void {
+    this.title.setTitle('IMD College of Management Development');
+    this.meta.addTags([
+      { name: 'description', content: 'IMD College of Management Development — accredited online qualifications in Financial Accounting, Business Management, Office Administration and more.' },
+      { name: 'robots', content: environment.noIndex ? 'noindex, nofollow' : 'index, follow' },
+    ]);
+  }
 }
