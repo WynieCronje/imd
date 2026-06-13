@@ -55,6 +55,10 @@ a {
  * Full-bleed sections: every section background spans the full viewport width.
  * Inner content is constrained and centered by `.container`.
  */
+app-root {
+  display: block;
+}
+
 .imd-shell {
   width: 100%;
 }

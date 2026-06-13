@@ -15,10 +15,6 @@
         </ul>
       </div>
 
-      <div class="footer__illustration">
-        <img [src]="footer.illustrationSrc" [alt]="footer.illustrationAlt" />
-      </div>
-
       <div class="footer__tag display">
         @for (line of footer.tagLines; track line) {
           <span>{{ line }}</span>
