@@ -146,8 +146,8 @@ export const SITE_CONTENT: SiteContent = {
   footer: {
     contactHeading: "Contact Us",
     contacts: [
-      { type: "phone", value: "+27 81 578 1579" },
-      { type: "email", value: "info@imdcollege.co.za" },
+      { type: "phone", value: "+27 81 578 1579", href: "tel:+27815781579" },
+      { type: "email", value: "info@imdcollege.co.za", href: "mailto:info@imdcollege.co.za" },
     ],
     illustrationSrc: "images/footer-illustration.svg",
     illustrationAlt: "Illustration of a person studying online",
@@ -160,7 +160,7 @@ export const SITE_CONTENT: SiteContent = {
       { network: "instagram", href: "#", label: "Instagram" },
       { network: "facebook", href: "https://www.facebook.com/share/18uZEVRUeR", label: "Facebook" },
       { network: "messenger", href: "#", label: "Messenger" },
-      { network: "whatsapp", href: "#", label: "WhatsApp" },
+      { network: "whatsapp", href: "https://wa.me/27815781579", label: "WhatsApp" },
     ],
   },
 } as SiteContent;

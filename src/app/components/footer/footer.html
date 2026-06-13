@@ -9,7 +9,7 @@
               <span class="footer__icon" aria-hidden="true"
                 [innerHTML]="contactIcon(c.type)">
               </span>
-              {{ c.value }}
+              <a [href]="c.href" class="footer__contact-link">{{ c.value }}</a>
             </li>
           }
         </ul>

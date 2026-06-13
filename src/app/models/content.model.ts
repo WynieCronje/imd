@@ -60,6 +60,7 @@ export interface ProgrammeCard {
 export interface ContactDetail {
   type: 'phone' | 'email';
   value: string;
+  href: string;
 }
 
 export interface SocialLink {
