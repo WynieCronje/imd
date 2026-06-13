@@ -37,7 +37,16 @@
 }
 
 @media (max-width: 640px) {
-  .discover__row { grid-template-columns: 1fr; }
-  .discover__media img { max-height: 240px; min-height: 0; }
-  .discover__copy { padding: 1.75rem 0; }
+  .discover__row {
+    grid-template-columns: 1fr;
+    padding: 0 var(--gutter);
+  }
+  .discover__media img {
+    max-height: 240px;
+    min-height: 0;
+    border-radius: 12px;
+  }
+  .discover__copy {
+    padding: 1.5rem 0 2rem;
+  }
 }
