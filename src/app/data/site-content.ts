@@ -14,7 +14,7 @@ export const SITE_CONTENT: SiteContent = {
 
   hero: {
     headingLines: ["Get Ready", "To Aim Higher", "Than Ever Before"],
-    ctaLabel: "Enroll here",
+    ctaLabel: "Register here",
     ctaHref: "#enroll",
     imageSrc: "images/graduate.jpg",
     imageAlt: "Smiling graduate holding a diploma",
