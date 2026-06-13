@@ -5,7 +5,11 @@
   "projects": {
     "imd-college": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,22 +17,24 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/imd-college",
-            "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"],
-            "scripts": [],
-            "prerender": true,
-            "ssr": false,
-            "outputMode": "static"
+            "styles": ["src/styles.scss"],
+            "server": "src/main.server.ts",
+            "outputMode": "static",
+            "security": {
+              "allowedHosts": []
+            },
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -65,8 +71,14 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

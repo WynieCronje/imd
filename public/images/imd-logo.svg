@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" width="120" height="90">
-  <path d="M60 8 L108 30 L60 52 L12 30 Z" fill="#DF5C2B"/>
-  <path d="M30 40 L30 60 Q60 78 90 60 L90 40 L60 54 Z" fill="none" stroke="#DF5C2B" stroke-width="6"/>
-  <line x1="108" y1="30" x2="108" y2="52" stroke="#DF5C2B" stroke-width="4"/>
-  <text x="60" y="84" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#00044B" text-anchor="middle">IMD</text>
-</svg>
