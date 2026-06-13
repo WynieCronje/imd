@@ -2,24 +2,14 @@
 
 .image-banner {
   width: 100%;
-  background-image: url('images/footer-image.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-height: 320px;
+  overflow: hidden;
+  line-height: 0;
 }
 
-.image-banner__inner {
-  height: 100%;
-  min-height: 320px;
-}
-
-@media (min-width: 768px) {
-  .image-banner { min-height: 420px; }
-  .image-banner__inner { min-height: 420px; }
-}
-
-@media (min-width: 1024px) {
-  .image-banner { min-height: 500px; }
-  .image-banner__inner { min-height: 500px; }
+.image-banner__img {
+  width: 100%;
+  height: clamp(320px, 45vw, 500px);
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
