@@ -1,0 +1,50 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__contact">
+        <h2 class="footer__heading display">{{ footer.contactHeading }}</h2>
+        <ul class="footer__list">
+          @for (c of footer.contacts; track c.value) {
+            <li>
+              <span class="footer__icon" aria-hidden="true"
+                [innerHTML]="contactIcon(c.type)">
+              </span>
+              {{ c.value }}
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="footer__illustration">
+        <img [src]="footer.illustrationSrc" [alt]="footer.illustrationAlt" />
+      </div>
+
+      <div class="footer__tag display">
+        @for (line of footer.tagLines; track line) {
+          <span>{{ line }}</span>
+        }
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__accred-badge">
+        <img class="footer__accred-logo"
+             src="images/ICB-logo.jpg"
+             [alt]="footer.accreditationLogoAlt" />
+      </div>
+      <div class="footer__accred">
+        <h3 class="footer__accred-heading">{{ footer.accreditationHeading }}</h3>
+        <p class="footer__accred-text">{{ footer.accreditationText }}</p>
+      </div>
+      <ul class="footer__socials">
+        @for (s of footer.socials; track s.network) {
+          <li>
+            <a [href]="s.href" [attr.aria-label]="s.label" class="footer__social"
+              [innerHTML]="svgIcon(s.network)">
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

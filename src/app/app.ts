@@ -2,13 +2,13 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { SITE_CONTENT } from "./data/site-content";
 import { SiteContent } from "./models/content.model";
 
-import { DiscoverComponent } from "./components/discover.component";
-import { FooterComponent } from "./components/footer.component";
-import { HeaderComponent } from "./components/header.component";
-import { HeroComponent } from "./components/hero.component";
-import { ProgrammeCardComponent } from "./components/programme-card.component";
-import { QualificationsNavComponent } from "./components/qualifications-nav.component";
-import { QuoteComponent } from "./components/quote.component";
+import { DiscoverComponent } from "./components/discover/discover";
+import { FooterComponent } from "./components/footer/footer";
+import { HeaderComponent } from "./components/header/header";
+import { HeroComponent } from "./components/hero/hero";
+import { ProgrammeCardComponent } from "./components/programme-card/programme-card";
+import { QualificationsNavComponent } from "./components/qualifications-nav/qualifications-nav";
+import { QuoteComponent } from "./components/quote/quote";
 
 @Component({
   selector: "app-root",

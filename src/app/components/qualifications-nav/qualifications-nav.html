@@ -1,0 +1,13 @@
+<section class="quals">
+  <div class="container">
+    <h2 class="quals__heading display">{{ nav.heading }}</h2>
+    <div class="quals__grid">
+      @for (link of nav.links; track link.href) {
+        <div class="quals__item">
+          <h3 class="quals__title">{{ link.title }}</h3>
+          <a class="pill quals__cta" [href]="link.href">{{ link.ctaLabel }}</a>
+        </div>
+      }
+    </div>
+  </div>
+</section>

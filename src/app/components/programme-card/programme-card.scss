@@ -1,0 +1,131 @@
+.pc {
+  --section-bg: var(--imd-orange);
+  --frame: var(--imd-navy);
+  --panel: var(--imd-orange);
+  --header: var(--imd-navy);
+  --ink: var(--imd-white);
+  --hairline: rgba(255, 255, 255, 0.85);
+
+  padding-block: 1.75rem;
+  background: var(--section-bg);
+}
+
+.pc--orange-on-navy {
+  --section-bg: var(--imd-orange);
+  --frame: var(--imd-navy);
+  --panel: var(--imd-orange);
+  --header: var(--imd-navy);
+}
+
+.pc--navy-on-orange {
+  --section-bg: var(--imd-navy);
+  --frame: var(--imd-orange);
+  --panel: var(--imd-navy);
+  --header: var(--imd-orange);
+}
+
+.pc__outer {
+  background: var(--frame);
+  border-radius: 26px;
+  padding: clamp(8px, 1.2vw, 16px);
+}
+
+.pc__inner {
+  position: relative;
+  background: var(--panel);
+  color: var(--ink);
+  border-radius: 18px;
+  outline: 2px solid var(--hairline);
+  outline-offset: -6px;
+  padding: 0 1.6rem 1.6rem;
+  margin-top: 34px;
+}
+
+.pc__head {
+  position: relative;
+  top: -34px;
+  margin-bottom: -34px;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: var(--header);
+  color: var(--imd-white);
+  border-radius: 16px;
+  padding: 0.6rem 1.1rem;
+  margin-inline: -0.4rem;
+}
+
+.pc__dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  flex: none;
+}
+
+.pc__title {
+  flex: 1;
+  margin: 0;
+  font-size: clamp(1.35rem, 3.5vw, 2rem);
+  line-height: 1.1;
+}
+
+.pc__close {
+  background: none;
+  border: none;
+  color: currentColor;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.pc__close:focus-visible {
+  outline: 2px solid var(--imd-white);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.pc__body { padding-top: 0.5rem; }
+
+.pc__intro {
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin: 0.25rem 0 1rem;
+}
+
+.pc__note {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 0.25rem 0 1rem;
+}
+
+.pc__content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.pc__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.pc__list li { margin-bottom: 0.1rem; }
+
+.pc__illustration {
+  width: 200px;
+  max-width: 38%;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .pc { padding-block: 1.1rem; }
+  .pc__inner { padding-inline: 1.1rem; }
+  .pc__content { flex-direction: column; align-items: center; }
+  .pc__illustration { max-width: 60%; }
+}
