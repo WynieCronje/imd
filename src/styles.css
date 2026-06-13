@@ -1,0 +1,99 @@
+/* ============================================================
+   IMD College — design tokens & base styles
+   Palette sampled directly from the source design.
+   ============================================================ */
+:root {
+  --imd-orange: #df5c2b;
+  --imd-orange-deep: #c94e22;
+  --imd-navy: #00044b;
+  --imd-navy-soft: #0a1060;
+  --imd-white: #ffffff;
+  --imd-cream: #fdf6ef;
+  --imd-ink: #1b1b1b;
+
+  --font-display: Georgia, 'Times New Roman', 'Playfair Display', serif;
+  --font-body: 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+
+  /* Max width of readable content; backgrounds always stretch full width. */
+  --content-width: 1024px;
+  --gutter: 1.75rem;
+
+  --radius-card: 18px;
+  --radius-pill: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--imd-ink);
+  background: var(--imd-navy); /* fallback so no white shows anywhere */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a { color: inherit; }
+
+/*
+ * Full-bleed sections: every section background spans the full viewport width.
+ * Inner content is constrained and centered by `.container`.
+ */
+.imd-shell {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Shared display heading style (the rounded serif look in the design). */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Pill button used throughout (Enroll / Find out more). */
+.pill {
+  display: inline-block;
+  background: var(--imd-white);
+  color: var(--imd-navy);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  padding: 0.55rem 1.4rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+.pill:focus-visible {
+  outline: 3px solid var(--imd-navy);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

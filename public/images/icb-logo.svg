@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="56" fill="#ffffff" stroke="#00044B" stroke-width="4"/>
+  <circle cx="60" cy="60" r="40" fill="#1C3F94"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff" text-anchor="middle">ICB</text>
+  <text x="60" y="100" font-family="Arial, sans-serif" font-size="9" fill="#00044B" text-anchor="middle">INTERNATIONAL</text>
+</svg>
