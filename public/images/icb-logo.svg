@@ -1,6 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <circle cx="60" cy="60" r="56" fill="#ffffff" stroke="#00044B" stroke-width="4"/>
-  <circle cx="60" cy="60" r="40" fill="#1C3F94"/>
-  <text x="60" y="70" font-family="Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff" text-anchor="middle">ICB</text>
-  <text x="60" y="100" font-family="Arial, sans-serif" font-size="9" fill="#00044B" text-anchor="middle">INTERNATIONAL</text>
+  <defs>
+    <path id="top-arc" d="M 18,60 A 42,42 0 1,1 102,60" fill="none"/>
+    <path id="bot-arc" d="M 22,68 A 38,38 0 0,0 98,68" fill="none"/>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="60" cy="60" r="57" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4"/>
+  <!-- Main circle fill -->
+  <circle cx="60" cy="60" r="54" fill="#ffffff"/>
+  <!-- Navy inner ring -->
+  <circle cx="60" cy="60" r="54" fill="none" stroke="#00044b" stroke-width="3"/>
+  <circle cx="60" cy="60" r="48" fill="none" stroke="#00044b" stroke-width="1"/>
+
+  <!-- Inner navy disc -->
+  <circle cx="60" cy="60" r="42" fill="#00044b"/>
+
+  <!-- Star / laurel accent dots on ring -->
+  <g fill="#df5c2b">
+    <circle cx="60" cy="15" r="2.5"/>
+    <circle cx="60" cy="105" r="2.5"/>
+    <circle cx="15" cy="60" r="2.5"/>
+    <circle cx="105" cy="60" r="2.5"/>
+    <circle cx="27" cy="27" r="1.8"/>
+    <circle cx="93" cy="27" r="1.8"/>
+    <circle cx="27" cy="93" r="1.8"/>
+    <circle cx="93" cy="93" r="1.8"/>
+  </g>
+
+  <!-- ICB letters -->
+  <text x="60" y="55" font-family="Arial Black, Arial, sans-serif" font-size="26" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">ICB</text>
+
+  <!-- Thin rule above and below -->
+  <line x1="26" y1="60" x2="94" y2="60" stroke="#df5c2b" stroke-width="1.2"/>
+
+  <!-- Sub-text -->
+  <text x="60" y="73" font-family="Arial, sans-serif" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">CERTIFIED</text>
+
+  <!-- Arc text: INSTITUTE OF -->
+  <text font-family="Arial, sans-serif" font-size="6" font-weight="600" fill="#00044b" letter-spacing="1.2">
+    <textPath href="#top-arc" startOffset="12%">INSTITUTE  OF  BOOKKEEPERS</textPath>
+  </text>
+
+  <!-- Bottom arc text -->
+  <text font-family="Arial, sans-serif" font-size="6" font-weight="600" fill="#df5c2b" letter-spacing="1">
+    <textPath href="#bot-arc" startOffset="8%">SOUTH  AFRICA  ·  EST.  1931</textPath>
+  </text>
 </svg>
