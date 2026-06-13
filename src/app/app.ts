@@ -32,12 +32,12 @@ import { QuoteComponent } from "./components/quote/quote";
       <app-quote [quote]="content.quote" />
       <app-discover [discover]="content.discover" />
       <app-qualifications-nav [nav]="content.qualificationsNav" />
-      <app-image-banner />
 
       @for (programme of content.programmes; track programme.id) {
         <app-programme-card [card]="programme" />
       }
 
+      <app-image-banner />
       <app-footer [footer]="content.footer" />
     </main>
   `,
