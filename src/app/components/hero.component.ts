@@ -36,8 +36,10 @@ import { HeroSection } from '../models/content.model';
       flex-direction: column;
       gap: 0.1rem;
       margin: 0 0 1.5rem;
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      line-height: 1.08;
+      font-size: clamp(2rem, 5.5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: 0.01em;
     }
     .hero__media { justify-self: end; width: 100%; max-width: 300px; }
     .hero__media img {

@@ -44,11 +44,13 @@ import { QuoteSection } from '../models/content.model';
       justify-content: center;
     }
     .quote__text {
-      font-size: clamp(1.3rem, 3.5vw, 2rem);
-      line-height: 1.18;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.2rem, 3.2vw, 1.8rem);
+      line-height: 1.25;
       margin: 0 0 1rem;
     }
-    .quote__attr { font-size: 1.1rem; margin: 0; }
+    .quote__attr { font-family: var(--font-serif); font-style: italic; font-size: 1rem; margin: 0; }
     .quote__panel {
       background: var(--imd-navy);
       color: var(--imd-white);

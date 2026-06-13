@@ -38,7 +38,7 @@ import { DiscoverSection } from '../models/content.model';
       min-height: 320px;
     }
     .discover__copy { padding: 2.5rem 0 2.5rem 2rem; }
-    .discover__heading { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0 0 1rem; }
+    .discover__heading { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0 0 1rem; }
     .discover__copy p { font-size: 0.95rem; margin: 0 0 1rem; }
     @media (max-width: 640px) {
       .discover__row { grid-template-columns: 1fr; }

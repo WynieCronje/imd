@@ -30,9 +30,10 @@ import { NavBrand } from '../models/content.model';
     .header__title {
       margin: 0;
       color: var(--imd-navy);
-      font-size: clamp(1.15rem, 3.2vw, 1.9rem);
+      font-size: clamp(1.05rem, 2.8vw, 1.65rem);
+      font-weight: 800;
       line-height: 1.05;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       display: flex;
       flex-direction: column;
     }

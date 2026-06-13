@@ -24,9 +24,10 @@ import { QualificationsNav } from '../models/content.model';
     .quals { width: 100%; background: var(--imd-navy); color: var(--imd-white); }
     .container { padding-block: 3rem 3.5rem; text-align: center; }
     .quals__heading {
-      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 800;
       margin: 0 0 2.5rem;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.06em;
     }
     .quals__grid {
       display: grid;
