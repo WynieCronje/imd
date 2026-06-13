@@ -15,7 +15,7 @@ export const SITE_CONTENT: SiteContent = {
   hero: {
     headingLines: ["Get Ready", "To Aim Higher", "Than Ever Before"],
     ctaLabel: "Register here",
-    ctaHref: "#enroll",
+    ctaHref: "javascript:void(0)",
     imageSrc: "images/graduate.jpg",
     imageAlt: "Smiling graduate holding a diploma",
   },
@@ -157,9 +157,9 @@ export const SITE_CONTENT: SiteContent = {
     accreditationLogoSrc: "images/icb-logo.svg",
     accreditationLogoAlt: "ICB International accreditation logo",
     socials: [
-      { network: "instagram", href: "#", label: "Instagram" },
+      { network: "instagram", href: "javascript:void(0)", label: "Instagram" },
       { network: "facebook", href: "https://www.facebook.com/share/18uZEVRUeR", label: "Facebook" },
-      { network: "messenger", href: "#", label: "Messenger" },
+      { network: "messenger", href: "javascript:void(0)", label: "Messenger" },
       { network: "whatsapp", href: "https://wa.me/27815781579", label: "WhatsApp" },
     ],
   },
