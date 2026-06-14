@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><g clip-path="url(#SvgjsClipPath1401)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(0.7805715735347207,0,0,0.7805715735347207,100,121.02079247529008)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" data-name="Layer 1" viewBox="0 0 1024.89 971.03" width="1024.89" height="971.03"><defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #e05d2b;
+      }
+
+      .cls-3 {
+        fill: #00044a;
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" y="200.95" width="1024.89" height="770.08"></rect>
+    </clipPath>
+  <clipPath id="SvgjsClipPath1401"><rect width="1000" height="1000" x="0" y="0" rx="500" ry="500"></rect></clipPath></defs><path class="cls-2" d="M932.6,289.45v-100.46l28.82-8.03L489.77,0,18.12,180.96l154.22,44.89v107.39c41.98-28.41,153.93-96.16,312.3-97.96,166.41-1.94,284.33,69.83,325.75,97.96-.14-27.86-.27-55.56-.41-83.42-13.72-6.93-27.99-13.86-42.81-20.64-40.19-18.15-78.85-32.29-114.87-43.51,33.39,1.95,73.43,7.77,116.94,22.04,14.82,4.84,28.54,10.11,41.15,15.79l106.55-29.93v96.02c-10.67,3.32-18.43,13.3-18.43,25.08,0,14.55,11.77,26.32,26.32,26.32s26.33-11.77,26.33-26.32c-.15-11.92-7.9-21.9-18.57-25.22Z"></path><g class="cls-4">
+    <g>
+      <path class="cls-3" d="M128.58,390.73v383.54H35.15v-383.54h93.43Z"></path>
+      <path class="cls-3" d="M612.6,390.73v383.54h-93.43v-229.99l-85.78,229.99h-75.38l-86.31-230.56v230.56h-93.43v-383.54h110.33l107.63,265.51,106.57-265.51h109.8Z"></path>
+      <path class="cls-3" d="M805.44,390.73c40.43,0,75.76,8.03,105.99,24.07,30.23,16.01,53.63,38.51,70.2,67.46,16.57,28.96,24.86,62.37,24.86,100.24s-8.29,70.85-24.86,99.98c-16.58,29.14-40.08,51.74-70.51,67.77-30.41,16.01-65.64,24.02-105.68,24.02h-143.68v-383.54h143.68ZM799.43,693.4c35.32,0,62.83-9.64,82.5-28.93,19.66-19.31,29.51-46.64,29.51-81.97s-9.84-62.83-29.51-82.5c-19.67-19.66-47.18-29.51-82.5-29.51h-44.24v222.91h44.24Z"></path>
+    </g>
+  </g></svg></g></g></svg>
