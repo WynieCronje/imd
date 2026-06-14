@@ -51,10 +51,30 @@ export class App implements OnInit {
   private title = inject(Title);
 
   ngOnInit(): void {
-    this.title.setTitle('IMD College of Management Development');
+    const title = 'IMD College of Management Development';
+    const description = 'IMD College of Management Development — accredited online qualifications in Financial Accounting, Business Management, Office Administration and more.';
+    const shareImage = `${environment.canonicalUrl}/images/imd-college-share.png`;
+
+    this.title.setTitle(title);
     this.meta.addTags([
-      { name: 'description', content: 'IMD College of Management Development — accredited online qualifications in Financial Accounting, Business Management, Office Administration and more.' },
+      { name: 'description', content: description },
       { name: 'robots', content: environment.noIndex ? 'noindex, nofollow' : 'index, follow' },
+
+      // Open Graph (Facebook, WhatsApp, LinkedIn, etc.)
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: environment.canonicalUrl },
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+      { property: 'og:image', content: shareImage },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:site_name', content: 'IMD College' },
+
+      // Twitter / X Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: shareImage },
     ]);
   }
 }
