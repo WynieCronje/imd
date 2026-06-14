@@ -157,7 +157,7 @@ export const SITE_CONTENT: SiteContent = {
     accreditationLogoSrc: "images/icb-logo.svg",
     accreditationLogoAlt: "ICB International accreditation logo",
     socials: [
-      { network: "instagram", href: "javascript:void(0)", label: "Instagram" },
+      { network: "instagram", href: "https://www.instagram.com/imd.college", label: "Instagram" },
       { network: "facebook", href: "https://www.facebook.com/college.imd/", label: "Facebook" },
       { network: "messenger", href: "https://m.me/college.imd", label: "Messenger" },
       { network: "whatsapp", href: "https://wa.me/27815781579", label: "WhatsApp" },
