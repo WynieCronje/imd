@@ -15,7 +15,7 @@ export const SITE_CONTENT: SiteContent = {
   hero: {
     headingLines: ["Get Ready", "To Aim Higher", "Than Ever Before"],
     ctaLabel: "Register here",
-    ctaHref: "javascript:void(0)",
+    ctaHref: "#",
     imageSrc: "images/graduate.jpg",
     imageAlt: "Smiling graduate holding a diploma",
   },
@@ -147,7 +147,11 @@ export const SITE_CONTENT: SiteContent = {
     contactHeading: "Contact Us",
     contacts: [
       { type: "phone", value: "+27 81 578 1579", href: "tel:+27815781579" },
-      { type: "email", value: "info@imdcollege.co.za", href: "mailto:info@imdcollege.co.za" },
+      {
+        type: "email",
+        value: "info@imdcollege.co.za",
+        href: "mailto:info@imdcollege.co.za",
+      },
     ],
     illustrationSrc: "images/footer-illustration.svg",
     illustrationAlt: "Illustration of a person studying online",
@@ -157,10 +161,26 @@ export const SITE_CONTENT: SiteContent = {
     accreditationLogoSrc: "images/icb-logo.svg",
     accreditationLogoAlt: "ICB International accreditation logo",
     socials: [
-      { network: "instagram", href: "https://www.instagram.com/imd.college", label: "Instagram" },
-      { network: "facebook", href: "https://www.facebook.com/college.imd/", label: "Facebook" },
-      { network: "messenger", href: "https://m.me/college.imd", label: "Messenger" },
-      { network: "whatsapp", href: "https://wa.me/27815781579", label: "WhatsApp" },
+      {
+        network: "instagram",
+        href: "https://www.instagram.com/imd.college",
+        label: "Instagram",
+      },
+      {
+        network: "facebook",
+        href: "https://www.facebook.com/college.imd/",
+        label: "Facebook",
+      },
+      {
+        network: "messenger",
+        href: "https://m.me/college.imd",
+        label: "Messenger",
+      },
+      {
+        network: "whatsapp",
+        href: "https://wa.me/27815781579",
+        label: "WhatsApp",
+      },
     ],
   },
 } as SiteContent;
