@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject, OnInit, DOCUMENT } from "@angular/core";
 import { Meta, Title } from "@angular/platform-browser";
 import { SITE_CONTENT } from "./data/site-content";
 import { SiteContent } from "./models/content.model";
@@ -49,6 +49,7 @@ export class App implements OnInit {
   protected readonly content: SiteContent = SITE_CONTENT;
   private meta = inject(Meta);
   private title = inject(Title);
+  private document = inject(DOCUMENT);
 
   ngOnInit(): void {
     const title = 'IMD College of Management Development';
@@ -56,11 +57,12 @@ export class App implements OnInit {
     const shareImage = `${environment.canonicalUrl}/images/imd-college-share.png`;
 
     this.title.setTitle(title);
+
     this.meta.addTags([
       { name: 'description', content: description },
       { name: 'robots', content: environment.noIndex ? 'noindex, nofollow' : 'index, follow' },
 
-      // Open Graph (Facebook, WhatsApp, LinkedIn, etc.)
+      // Open Graph
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: environment.canonicalUrl },
       { property: 'og:title', content: title },
@@ -69,6 +71,7 @@ export class App implements OnInit {
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
       { property: 'og:site_name', content: 'IMD College' },
+      { property: 'og:locale', content: 'en_ZA' },
 
       // Twitter / X Card
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -76,5 +79,54 @@ export class App implements OnInit {
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: shareImage },
     ]);
+
+    // Canonical link
+    this.setCanonical(environment.canonicalUrl);
+
+    // JSON-LD structured data
+    this.injectJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'EducationalOrganization',
+      name: 'IMD College of Management Development',
+      url: environment.canonicalUrl,
+      logo: `${environment.canonicalUrl}/images/imd-college-logo.svg`,
+      image: shareImage,
+      description,
+      telephone: '+27815781579',
+      email: 'info@imdcollege.co.za',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'ZA',
+      },
+      sameAs: [
+        'https://www.facebook.com/college.imd/',
+        'https://www.instagram.com/imd.college',
+      ],
+      hasCredential: [
+        'Financial Accounting',
+        'Business Management',
+        'Office Administration',
+        'Skills Programmes & Services',
+      ].map(name => ({ '@type': 'EducationalOccupationalCredential', name })),
+    });
+  }
+
+  private setCanonical(url: string): void {
+    const existing = this.document.querySelector('link[rel="canonical"]');
+    if (existing) {
+      existing.setAttribute('href', url);
+    } else {
+      const link = this.document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      link.setAttribute('href', url);
+      this.document.head.appendChild(link);
+    }
+  }
+
+  private injectJsonLd(schema: object): void {
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    this.document.head.appendChild(script);
   }
 }
