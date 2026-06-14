@@ -7,7 +7,7 @@ import { SiteContent } from "../models/content.model";
 export const SITE_CONTENT: SiteContent = {
   brand: {
     logoSrc: "images/imd-college-logo.svg",
-    logoAlt: "IMD logo",
+    logoAlt: "IMD College of Management Development logo",
     title: "COLLEGE OF MANAGEMENT",
     titleLine2: "DEVELOPMENT",
   },
@@ -33,8 +33,8 @@ export const SITE_CONTENT: SiteContent = {
     imageAlt: "Person working on a laptop",
     heading: "Discover IMD",
     paragraphs: [
-      "At IMD, our goal is to be among the top professional education companies globally. We believe that, for a team to reach its fullest potential, we must equip the people behind the scenes. We want everyone to succeed; it\u2019s why we value the power of growth and development.",
-      "Our Business department, at IMD, was made exactly to nurture that growth. We serve as guides and goalposts for student in their journey to becoming the best versions of themselves.",
+      "IMD College offers accredited online qualifications in Financial Accounting, Business Management, and Office Administration \u2014 designed for working adults and school leavers across South Africa. Study at your own pace with full ICB recognition, from anywhere in the country.",
+      "Whether you\u2019re starting out after matric or upskilling while you work, our distance learning programmes give you a real qualification without putting your life on hold. We guide every student from enrolment to certification.",
     ],
   },
 

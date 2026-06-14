@@ -52,14 +52,15 @@ export class App implements OnInit {
   private document = inject(DOCUMENT);
 
   ngOnInit(): void {
-    const title = 'IMD College of Management Development';
-    const description = 'IMD College of Management Development — accredited online qualifications in Financial Accounting, Business Management, Office Administration and more.';
+    const title = 'Online Bookkeeping & Business Management Courses | IMD College South Africa';
+    const description = 'Study online with IMD College — accredited ICB bookkeeping, financial accounting, and business management qualifications. Flexible distance learning for working adults and matrics across South Africa.';
     const shareImage = `${environment.canonicalUrl}/images/imd-college-share.png`;
 
     this.title.setTitle(title);
 
     this.meta.addTags([
       { name: 'description', content: description },
+      { name: 'keywords', content: 'online bookkeeping courses South Africa, ICB financial accounting, business management qualification online, distance learning college Johannesburg, bookkeeping to trial balance, SARS returns course, NQF accounting qualification, office administration online, flexible online college South Africa' },
       { name: 'robots', content: environment.noIndex ? 'noindex, nofollow' : 'index, follow' },
 
       // Open Graph
@@ -88,6 +89,7 @@ export class App implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'EducationalOrganization',
       name: 'IMD College of Management Development',
+      alternateName: 'IMD College',
       url: environment.canonicalUrl,
       logo: `${environment.canonicalUrl}/images/imd-college-logo.svg`,
       image: shareImage,
@@ -96,8 +98,12 @@ export class App implements OnInit {
       email: 'info@imdcollege.co.za',
       address: {
         '@type': 'PostalAddress',
+        addressLocality: 'Johannesburg',
+        addressRegion: 'Gauteng',
         addressCountry: 'ZA',
       },
+      areaServed: 'South Africa',
+      teaches: 'Financial Accounting, Business Management, Office Administration, Bookkeeping, Pastel, Xero',
       sameAs: [
         'https://www.facebook.com/college.imd/',
         'https://www.instagram.com/imd.college',
