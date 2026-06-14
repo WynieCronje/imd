@@ -3,15 +3,16 @@
   [class.pc--orange-on-navy]="card.variant === 'orange-on-navy'"
   [class.pc--navy-on-orange]="card.variant === 'navy-on-orange'"
   [id]="card.id"
+  [attr.aria-labelledby]="'pc-heading-' + card.id"
 >
   <div class="container">
     <div class="pc__outer">
       <div class="pc__inner">
         <header class="pc__head">
           <span class="pc__dot" aria-hidden="true"></span>
-          <h3 class="pc__title display">{{ card.title }}</h3>
-          <button class="pc__close" type="button" aria-label="Close">
-            <span aria-hidden="true">&#10005;</span>
+          <h3 class="pc__title display" [id]="'pc-heading-' + card.id">{{ card.title }}</h3>
+          <button class="pc__close" type="button" aria-hidden="true" tabindex="-1">
+            <span>&#10005;</span>
           </button>
         </header>
 

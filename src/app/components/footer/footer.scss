@@ -35,6 +35,11 @@
   text-decoration: none;
 }
 .footer__contact-link:hover { text-decoration: underline; }
+.footer__contact-link:focus-visible {
+  outline: 3px solid var(--imd-white);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 
 .footer__icon {
   display: inline-flex;
@@ -107,8 +112,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--imd-orange);
   color: var(--imd-white);

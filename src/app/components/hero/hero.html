@@ -1,12 +1,12 @@
-<section class="hero" id="enroll">
+<section class="hero" aria-labelledby="hero-heading">
   <div class="container hero__row">
     <div class="hero__copy">
-      <h2 class="hero__heading display">
+      <h2 class="hero__heading display" id="hero-heading">
         @for (line of hero.headingLines; track line) {
           <span>{{ line }}</span>
         }
       </h2>
-      <a class="pill hero__cta" [href]="hero.ctaHref">{{ hero.ctaLabel }}</a>
+      <a class="pill hero__cta" [href]="hero.ctaHref" role="button">{{ hero.ctaLabel }}</a>
     </div>
     <div class="hero__media">
       <img [src]="hero.imageSrc" [alt]="hero.imageAlt" />

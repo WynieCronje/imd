@@ -1,10 +1,10 @@
-<section class="discover">
+<section class="discover" aria-labelledby="discover-heading">
   <div class="container discover__row">
     <div class="discover__media">
       <img [src]="discover.imageSrc" [alt]="discover.imageAlt" />
     </div>
     <div class="discover__copy">
-      <h2 class="discover__heading display">{{ discover.heading }}</h2>
+      <h2 class="discover__heading display" id="discover-heading">{{ discover.heading }}</h2>
       @for (p of discover.paragraphs; track $index) {
         <p>{{ p }}</p>
       }

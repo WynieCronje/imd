@@ -1,11 +1,11 @@
-<section class="quals">
+<section class="quals" aria-labelledby="quals-heading">
   <div class="container">
-    <h2 class="quals__heading display">{{ nav.heading }}</h2>
+    <h2 class="quals__heading display" id="quals-heading">{{ nav.heading }}</h2>
     <div class="quals__grid">
       @for (link of nav.links; track link.href) {
         <div class="quals__item">
           <h3 class="quals__title">{{ link.title }}</h3>
-          <a class="pill quals__cta" [href]="link.href">{{ link.ctaLabel }}</a>
+          <a class="pill quals__cta" [href]="link.href" role="button">{{ link.ctaLabel }}</a>
         </div>
       }
     </div>

@@ -28,7 +28,8 @@ import { QuoteComponent } from "./components/quote/quote";
     FooterComponent,
   ],
   template: `
-    <main class="imd-shell">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main class="imd-shell" id="main-content">
       <app-header [brand]="content.brand" />
       <app-hero [hero]="content.hero" />
       <app-quote [quote]="content.quote" />

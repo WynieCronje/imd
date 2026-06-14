@@ -51,6 +51,24 @@ a {
   color: inherit;
 }
 
+/* Skip navigation — visually hidden until focused by keyboard */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--imd-navy);
+  color: var(--imd-white);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-card);
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
 /*
  * Full-bleed sections: every section background spans the full viewport width.
  * Inner content is constrained and centered by `.container`.
