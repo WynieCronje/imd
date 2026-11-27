@@ -66,6 +66,14 @@ logos and illustrations (`imd-logo.svg`, `icb-logo.svg`,
 `skills-illustration.svg`, `footer-illustration.svg`) are placeholders — swap
 in the official brand assets for production.
 
+## Fact sheets
+
+`docs/fact-sheets/` holds the one-page qualification fact sheets (PDF) in the
+IMD theme. Edit the copy in `content.mjs` — fees, the discount and dates are
+at the top — then regenerate with `node docs/fact-sheets/build.mjs` (needs Chrome and an
+internet connection for the web fonts). The build reports if any sheet's
+content no longer fits on its page.
+
 Web fonts stand in for the design's fonts (see
 `docs/design-assets/font-used.txt`); the mapping is noted beside the font
 tokens in `src/styles.scss`.
