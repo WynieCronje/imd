@@ -1,15 +1,34 @@
 <section class="hero" aria-labelledby="hero-heading">
   <div class="container hero__row">
     <div class="hero__copy">
-      <h2 class="hero__heading display" id="hero-heading">
-        @for (line of hero.headingLines; track line) {
-          <span>{{ line }}</span>
-        }
-      </h2>
+      <div class="hero__headline">
+        <h2 class="hero__heading heading" id="hero-heading">
+          @for (line of hero.headingLines; track line) {
+            <span>{{ line }}</span>
+          }
+        </h2>
+        <!-- Hand-drawn accents from the design; purely decorative. -->
+        <img
+          class="hero__doodle hero__doodle--circle"
+          src="images/doodles/hero-circle.webp"
+          alt=""
+          aria-hidden="true"
+          width="666"
+          height="377"
+        />
+        <img
+          class="hero__doodle hero__doodle--scribble"
+          src="images/doodles/hero-scribble.webp"
+          alt=""
+          aria-hidden="true"
+          width="664"
+          height="154"
+        />
+      </div>
       <a class="pill hero__cta" [href]="hero.ctaHref" role="button">{{ hero.ctaLabel }}</a>
     </div>
     <div class="hero__media">
-      <img [src]="hero.imageSrc" [alt]="hero.imageAlt" />
+      <img [src]="hero.imageSrc" [alt]="hero.imageAlt" width="722" height="804" />
     </div>
   </div>
 </section>

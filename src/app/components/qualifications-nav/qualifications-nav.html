@@ -1,6 +1,29 @@
 <section class="quals" aria-labelledby="quals-heading">
-  <div class="container">
-    <h2 class="quals__heading display" id="quals-heading">{{ nav.heading }}</h2>
+  <div class="container quals__inner">
+    <h2 class="quals__heading heading" id="quals-heading">
+      <span class="quals__heading-text">
+        {{ nav.heading }}
+        <!-- Hand-drawn accents from the design; purely decorative. -->
+        <img
+          class="quals__spark quals__spark--left"
+          src="images/doodles/spark-left.webp"
+          alt=""
+          aria-hidden="true"
+          width="254"
+          height="224"
+          loading="lazy"
+        />
+        <img
+          class="quals__spark quals__spark--right"
+          src="images/doodles/spark-right.webp"
+          alt=""
+          aria-hidden="true"
+          width="218"
+          height="268"
+          loading="lazy"
+        />
+      </span>
+    </h2>
     <div class="quals__grid">
       @for (link of nav.links; track link.href) {
         <div class="quals__item">

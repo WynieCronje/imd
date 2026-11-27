@@ -24,7 +24,8 @@ export const SITE_CONTENT: SiteContent = {
     quote:
       '"Education is the most powerful weapon which you can use to change the world."',
     attribution: "— Nelson Mandela",
-    bodyHtmlLead: "Discover the flexibility of our online learning options",
+    bodyHtmlLead: "Discover the flexibility of our ",
+    bodyEmphasis: "online learning options",
     body: " designed to fit your lifestyle. Whether you\u2019re balancing work or family commitments, our programs adapt to your needs, allowing you to study at your own pace from the comfort of your home. Unlock your potential and take the next step towards your future today!",
   },
 
@@ -138,7 +139,7 @@ export const SITE_CONTENT: SiteContent = {
         "Xero Accounting",
         "Pastel Partner",
       ],
-      illustrationSrc: "images/skills-illustration.svg",
+      illustrationSrc: "images/skills-illustration.webp",
       illustrationAlt: "Illustration of books and learning tools",
     },
   ],

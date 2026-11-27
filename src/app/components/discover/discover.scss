@@ -1,44 +1,65 @@
 :host { display: block; }
+
 .discover {
   width: 100%;
   background: var(--imd-orange);
   color: var(--imd-white);
 }
 
+/*
+ * The photo bleeds to the left edge of the viewport while the copy stays on
+ * the page grid: the photo column is 37.5% of the design's 1024px page, plus
+ * whatever margin sits outside the centred content on wider screens.
+ */
 .discover__row {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns:
+    max(37.5%, calc(50% - var(--content-width) / 2 + var(--content-width) * 0.375))
+    minmax(0, 1fr);
   align-items: stretch;
-  gap: 0;
-  /* let the image bleed to the section's left edge within the container */
-  padding: 0;
 }
 
-.discover__media { align-self: stretch; }
-
-.discover__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.discover__media {
+  position: relative;
   min-height: 320px;
 }
 
-.discover__copy { padding: 2.5rem 0 2.5rem 2rem; }
+/* Absolutely positioned so the copy, not the photo, sets the row height. */
+.discover__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.discover__copy {
+  padding: clamp(2rem, 7.9vw, 5.05rem) var(--gutter) clamp(2rem, 4.9vw, 3.1rem)
+    clamp(1.5rem, 5vw, 3.25rem);
+}
 
 .discover__heading {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 4.29vw, 2.74rem);
+  line-height: 1.15;
+  margin: 0 0 clamp(0.75rem, 1.9vw, 1.2rem);
 }
 
 .discover__copy p {
-  font-size: 0.95rem;
-  margin: 0 0 1rem;
+  font-family: var(--font-din);
+  font-size: clamp(1rem, 2.05vw, 1.31rem);
+  line-height: 1.38;
+  letter-spacing: 0.03em;
+  max-width: 21.7em; /* the design's line length */
+  margin: 0 0 1.38em;
+}
+
+.discover__copy p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 640px) {
   .discover__row { grid-template-columns: 1fr; }
-  .discover__media img { max-height: 260px; min-height: 0; }
-  .discover__copy { padding: 1.5rem var(--gutter) 2rem; }
+  .discover__media { min-height: 0; height: 260px; }
+  .discover__copy { padding: 1.75rem var(--gutter) 2.25rem; }
 }

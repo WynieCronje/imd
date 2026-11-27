@@ -59,7 +59,13 @@ No component code needs to change — the type checker enforces the shape.
 ## Assets
 
 Images live in `public/images/`. The photos (`graduate.jpg`,
-`laptop-hands.jpg`) are cropped from the source design; the logos and
-illustrations (`imd-logo.svg`, `icb-logo.svg`, `skills-illustration.svg`,
-`footer-illustration.svg`) are placeholders — swap in the official brand
-assets for production.
+`laptop-hands.jpg`, `quote-background.*`), the skills illustration
+(`skills-illustration.webp`) and the hand-drawn accents in `doodles/` are
+exported from the source design PDF in `docs/design-assets/`. The remaining
+logos and illustrations (`imd-logo.svg`, `icb-logo.svg`,
+`skills-illustration.svg`, `footer-illustration.svg`) are placeholders — swap
+in the official brand assets for production.
+
+Web fonts stand in for the design's fonts (see
+`docs/design-assets/font-used.txt`); the mapping is noted beside the font
+tokens in `src/styles.scss`.
