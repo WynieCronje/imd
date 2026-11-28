@@ -1,11 +1,24 @@
 <section class="quote" aria-label="Quote and introduction">
+  <picture class="quote__bg">
+    <source srcset="images/quote-background.webp" type="image/webp" />
+    <img
+      src="images/quote-background.jpg"
+      alt=""
+      aria-hidden="true"
+      decoding="async"
+      width="1600"
+      height="1067"
+    />
+  </picture>
   <div class="container quote__row">
     <div class="quote__card">
-      <p class="quote__text display">{{ quote.quote }}</p>
-      <p class="quote__attr display">{{ quote.attribution }}</p>
+      <p class="quote__text">{{ quote.quote }}</p>
+      <p class="quote__attr">{{ quote.attribution }}</p>
     </div>
     <div class="quote__panel">
-      <p>{{ quote.bodyHtmlLead }}{{ quote.body }}</p>
+      <p>
+        {{ quote.bodyHtmlLead }}@if (quote.bodyEmphasis) {<strong>{{ quote.bodyEmphasis }}</strong>}{{ quote.body }}
+      </p>
     </div>
   </div>
 </section>

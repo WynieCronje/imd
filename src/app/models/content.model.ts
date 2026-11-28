@@ -22,7 +22,8 @@ export interface HeroSection {
 export interface QuoteSection {
   quote: string;
   attribution: string;        // "— Nelson Mandela"
-  bodyHtmlLead: string;        // intro sentence with emphasis
+  bodyHtmlLead: string;        // opening words of the paragraph
+  bodyEmphasis?: string;       // phrase rendered bold, straight after the lead
   body: string;                // remaining paragraph
 }
 
